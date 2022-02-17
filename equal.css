@@ -1,0 +1,20 @@
+.equal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: min(10vw,80px);
+}
+
+.equal.top,.equal.bot  {
+    width: 50%;
+    background-color: red;
+    -webkit-box-shadow: 5px 5px 8px 1px #000000; 
+    box-shadow: 5px 5px 8px 1px #000000;
+}
+
+.equal.space {
+    width: 50%;
+    background-color: #ffffff00;
+}

@@ -1,0 +1,30 @@
+.different {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    width: 100%;
+    height: min(10vw,80px);
+}
+
+.different.top,.different.bot,.different.middle  {
+    width: 50%;
+    background-color: blue;
+    -webkit-box-shadow: 5px 5px 8px 1px #000000; 
+    box-shadow: 5px 5px 8px 1px #000000;
+}
+
+.different.middle {
+    width: 78%;
+    border-radius: 100px;
+    transform: rotate(-45deg);
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.different.space {
+    width: 50%;
+    background-color: #ffffff00;
+}
