@@ -69,3 +69,6 @@ function pressButton(e, direct){
 }
 
 
+function beginCycle(){
+    
+}
