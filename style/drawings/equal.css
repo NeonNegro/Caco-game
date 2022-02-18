@@ -5,6 +5,7 @@
     justify-content: center;
     width: 100%;
     height: min(10vw,80px);
+    cursor: pointer;
 }
 
 .equal.top,.equal.bot  {
@@ -16,5 +17,5 @@
 
 .equal.space {
     width: 50%;
-    background-color: #ffffff00;
+    opacity: 0;
 }
