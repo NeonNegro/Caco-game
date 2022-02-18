@@ -3,7 +3,6 @@
     max-width: 100vw;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .blur{
@@ -16,58 +15,20 @@
 }
 
 .middle-container{
-    width: 70%;
+    width: 80%;
     max-width: 500px;
     min-height: 100%;
     max-height: 100%;
     height: 100%;
-    margin-right: auto;
+    /* margin-right: auto; */
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10%;
-}
-
-.equal-sign, .different-sign{
-    position: relative;
-    /* width: 120px; */
-    min-width: 40px;
-    width: 33%;
-    height: 90px;
-}
-
-.equal-line, .different-line, .equal-line-top, .different-line-top, .different-line-cross{
-    position: absolute;
-    width: 100%;
-    height: 30px;
-    background-color: red;
-    -webkit-box-shadow: 5px 5px 8px 1px #000000; 
-    box-shadow: 5px 5px 8px 1px #000000;
-}
-.equal-line-top, .different-line-top{
-    top:0;
-}
-.equal-line, .different-line{
-    top:60px;
-}
-
-.different-line, .different-line-top, .different-line-cross{
-    background-color: blue;
-}
-
-.different-line-cross{
-    z-index: 1;
-    top: 35px;
-    left: -33px;
-    width: 180px;
-    transform: rotate(301deg);
-    border-radius: 100px;
-    -webkit-box-shadow: none;
-    box-shadow: none;
+    gap: 20%;
 }
 
 .face {
-    width: 33%;
+    width: 100%;
     max-height: 33vw;
     background-color: yellow;
     display: flex;
@@ -82,11 +43,12 @@
 
 .lives {
     display: flex;
-    gap: min(5%, 10px);
-    align-self: self-end;
-    margin-bottom: min(3%,20px);
-    margin-left: min(3%,20px);
     width: 30%;
+    gap: min(5%, 10px);
+    align-self: self-start;
+    margin-top: min(3%,20px);
+    margin-left: min(3%,20px);
+    margin-right: min(3%,20px);
 }
 
 .live{

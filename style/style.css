@@ -3,7 +3,7 @@
     max-width: 100vw;
     height: 80vh;
     background-color: rgb(167, 111, 167);
-    background-image: url(./assets/cenario_passando_normal.gif);
+    background-image: url(../assets/cenario_passando_normal.gif);
     background-size: cover;
     position: relative;
 }

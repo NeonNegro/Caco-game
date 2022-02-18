@@ -8,7 +8,7 @@
 }
 
 .equal.top,.equal.bot  {
-    width: 50%;
+    width: 100%;
     background-color: red;
     -webkit-box-shadow: 5px 5px 8px 1px #000000; 
     box-shadow: 5px 5px 8px 1px #000000;
