@@ -6,6 +6,7 @@
     width: 100%;
     height: min(10vw,80px);
     margin-right: 15px;
+    cursor: pointer;
 }
 
 .different.top,.different.bot,.different.middle  {
