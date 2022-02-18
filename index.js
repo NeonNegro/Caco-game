@@ -1,1 +1,2 @@
-const 
+let phase;
+let stage;
