@@ -1250,3 +1250,12 @@ begin
 end;
 
 end.
+
+
+
+
+
+//fase
+//Nivel // conta ponto //come banana
+//ciclo // conta ponto /come banana
+//ierr

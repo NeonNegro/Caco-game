@@ -2,22 +2,22 @@ const cycles = ['500', '1000', '2000'];
 
 const levels = [
     {
-        durIEEs : ['d200e500','d200e450','d200e400'],
+        durIEEs : ['D200E500','D200E450','D200E400'],
     },
     {
-        durIEEs : ['d150e400','d150e350','d150e300'],
+        durIEEs : ['D150E400','D150E350','d150e300'],
     },
     {
         durIEEs : ['d100e300','d100e250','d100e200'],
     },
     {
-        durIEEs : ['d80e200','d80e150','d80e100'],
+        durIEEs : ['D80E200','D80E150','D80E100'],
     },
     {
-        durIEEs : ['d60e100','d60e80','d60e60', 'd60e40', 'd60e20'],
+        durIEEs : ['D60E100','D60E80','D60E60', 'D60E40', 'D60E20'],
     },
     {
-        durIEEs : ['d40e100','d40e80','d40e60', 'd40e40', 'd40e20'],
+        durIEEs : ['D40E100','D40E80','D40E60', 'D40E40', 'D40E20'],
     }
 ];
 
@@ -34,7 +34,7 @@ const phase_3 = {
 }
 
 
-document.querySelector('.equal').addEventListener("click", example, true);
+document.querySelector('.face').addEventListener("click", example, true);
 
 
 document.querySelector('.equal').addEventListener("mousedown", (e) => {buttonPress(e,'down')}, true);
@@ -44,16 +44,17 @@ document.querySelector('.different').addEventListener("mouseup", (e) =>{buttonPr
 
 
 async function example(){
-    new Audio(`./assets/sounds/F${cycles[0]}${levels[0].durIEEs[0]}aa.wav`).play();
-    await delay(2000);
-    new Audio(`./assets/sounds/F${cycles[0]}${levels[0].durIEEs[0]}ag.wav`).play();
+    //new Audio(`/assets/sounds/F${cycles[0]}${levels[0].durIEEs[0]}AA.wav`).play();
+    console.log('tocando!');
+    await delay(1000);
+    simulateClick('.equal');
+    await delay(1000);
+    //new Audio(`/assets/sounds/F${cycles[0]}${levels[0].durIEEs[0]}AG.wav`).play();
+    console.log('tocando!');
+    await delay(1000);
+    simulateClick('.different');
 }
 
-
-
-function delay(time) {
-    return new Promise(resolve => setTimeout(resolve, time));
-  }
 
 
 
@@ -63,7 +64,11 @@ function buttonPress(e, direct){
      for(let i=0; i<children.length; i++)
         if(direct === 'down') 
             children[i].classList.add('pressed');
-        else{
-            children[i].classList.remove('pressed');
-        }
+        else
+            setTimeout(()=>{children[i].classList.remove('pressed')}, 200);
+}
+
+
+function beginCycle(){
+    
 }
