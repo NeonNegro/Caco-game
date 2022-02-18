@@ -37,10 +37,10 @@ const phase_3 = {
 document.querySelector('.equal').addEventListener("click", example, true);
 
 
-document.querySelector('.equal').addEventListener("mousedown", (e) => {pressButton(e,'down')}, true);
-document.querySelector('.equal').addEventListener("mouseup", (e) =>{pressButton(e,'up')}, true);
-document.querySelector('.different').addEventListener("mousedown", (e) => {pressButton(e,'down')}, true);
-document.querySelector('.different').addEventListener("mouseup", (e) =>{pressButton(e,'up')}, true);
+document.querySelector('.equal').addEventListener("mousedown", (e) => {buttonPress(e,'down')}, true);
+document.querySelector('.equal').addEventListener("mouseup", (e) =>{buttonPress(e,'up')}, true);
+document.querySelector('.different').addEventListener("mousedown", (e) => {buttonPress(e,'down')}, true);
+document.querySelector('.different').addEventListener("mouseup", (e) =>{buttonPress(e,'up')}, true);
 
 
 async function example(){
@@ -57,7 +57,7 @@ function delay(time) {
 
 
 
-function pressButton(e, direct){
+function buttonPress(e, direct){
    const children = e.currentTarget.children;
     
      for(let i=0; i<children.length; i++)
