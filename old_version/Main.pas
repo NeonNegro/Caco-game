@@ -1,3 +1,32 @@
+{
+  acao = 0 ----- jogo normal (?)
+  acao = 1 ----- desenhaPassando()
+  acao = 2 ----- desenhaBatendo()
+  acao = 3 ----- desenhaComendo();
+  acao = 4 ----- exemploFase();
+
+  arraySom toca randômico;
+
+
+
+  
+  qtdNiveis := 6;
+  qtdCiclos := 3;
+  totalVidas := 3;
+  totalTentativas := 12;
+
+  a cada 12 tentativas, troca de durIEE
+
+
+
+Nivel // conta ponto //come banana
+fase
+ciclo // conta ponto /come banana
+ierr
+
+}
+
+
 unit Main;
 
 interface
@@ -176,7 +205,7 @@ begin
     nivelAtual := Ini.ReadInteger( nomeDoUsuario+'-Caco', 'nivelAtual', 1 );
     cicloAtual := Ini.ReadInteger( nomeDoUsuario+'-Caco', 'cicloAtual', 1 );
     durIEEAtual := Ini.ReadInteger( nomeDoUsuario+'-Caco', 'durIEEAtual', 1 );
-    exibeSomAtual := Ini.ReadBool( nomeDoUsuario+'-Caco', 'exibeSomAtual', false );
+    exibeSomAtual := Ini.ReadBool( nomeDoUsuario+'-Caco', 'exibeSomAtual', true );
   finally
     ini.Free;
   end;
@@ -356,8 +385,7 @@ begin
   begin
     if ((x/ClientWidth) > 0.4) and ((x/ClientWidth) < 0.56) and ((y/ClientHeight) > 0.75) then
     begin
-      if (tentativaAtual <= totalTentativas) and
-         (resposta1 <> -1) and (resposta2 <> -1)then
+      if (tentativaAtual <= totalTentativas) and (resposta1 <> -1) and (resposta2 <> -1)then
         begin
           acao := 0;
           tentativaAtual := tentativaAtual +1;
@@ -375,7 +403,7 @@ begin
           desenhaTarjaNormal();
 
          if (faseAtual = 1) then
-           begin
+          begin
             resposta0 := 0;
             resposta1 := 0;
             resposta2 := -1;
@@ -1250,12 +1278,3 @@ begin
 end;
 
 end.
-
-
-
-
-
-//fase
-//Nivel // conta ponto //come banana
-//ciclo // conta ponto /come banana
-//ierr
