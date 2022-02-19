@@ -22,6 +22,7 @@ const render = {
     },
     gameOver: () => {
         render.showMessage('GAME OVER');
+        new Audio(`/assets/sounds/gameOver.wav`).play();
     }
 
 }

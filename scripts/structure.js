@@ -33,7 +33,7 @@ const attempts = {
     next: () => { 
         if(attempts.actual === attempts.TOTAL){
             attempts.actual = 1
-            return 'end'
+            return true
         }
         else
             attempts.actual++
@@ -52,7 +52,7 @@ const phases = {
         if (act > phases.TOTAL)
             act = 1;
         phases.actual = Object.keys(phases).find(key => phases[key] === act);
-        return (act === 1) ? 'end' : undefined
+        return (act === 1) ? true : undefined
     },
 };
  const levels = {
@@ -62,7 +62,7 @@ const phases = {
      next: () => { 
         if(levels.actual === levels.TOTAL){
             levels.actual = 1
-            return 'end'
+            return true
         }
         else
             levels.actual++
@@ -87,7 +87,7 @@ const durIEEs = {
         const index = durIEEs.actualIndex;
         if(index === (levelList.length-1)) {
             durIEEs.actualIndex = 0;
-            return 'end'
+            return true;
         }
         else
             durIEEs.actualIndex = index + 1;
