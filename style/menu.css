@@ -57,6 +57,9 @@
     width: 33%;
     max-width: 40px;
 }
+.live.lost{
+    visibility: hidden;
+}
 
 .live img {
     position: absolute;

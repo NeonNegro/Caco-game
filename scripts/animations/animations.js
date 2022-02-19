@@ -1,19 +1,21 @@
-const animations = {
+const assets = {
     passing : '../../assets/imgs/passando.gif',
     hiting : '../../assets/imgs/hiting.gif',
 }
 
 
+const animations = {
+    rightAnswer: async () =>{
+        document.querySelector('.screen-img').src = assets.passing;
+        document.querySelector(".jungle").style.backgroundImage = `url(${assets.passing})`;
+        await delay(500);
+        new Audio(`/assets/sounds/rightAnswer.wav`).play();
+    },
+    wrongAnswer: async () => {
+        document.querySelector('.screen-img').src = assets.hiting;
+        document.querySelector(".jungle").style.backgroundImage = `url(${assets.hiting})`;
+        await delay(1200);
+        new Audio(`/assets/sounds/wrongAnswer.wav`).play();
+    },
 
-async function showRightAnswerAnimation(){
-    document.querySelector('.screen-img').src = animations.passing;
-    document.querySelector(".jungle").style.backgroundImage = `url(${animations.passing})`;
-    await delay(500);
-    new Audio(`/assets/sounds/rightAnswer.wav`).play();
-}
-async function showWrongAnswerAnimation(){
-    document.querySelector('.screen-img').src = animations.hiting;
-    document.querySelector(".jungle").style.backgroundImage = `url(${animations.hiting})`;
-    await delay(1200);
-    new Audio(`/assets/sounds/wrongAnswer.wav`).play();
 }

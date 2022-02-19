@@ -18,6 +18,38 @@
     border: 10px solid white;
 }
 
+.message {
+    position: absolute;
+    width: 400px;
+    max-width: 100vw;
+    max-height: 75vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 10px solid rgb(223, 130, 130);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffffc7;
+}
+
+.message h1{
+    font-size: 70px;
+    text-align: center;
+}
+.message-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(3 2 0 / 52%);
+}
+
+.hide{
+    display: none;
+}
+
 .screen img{
     max-width: 100%;
 }

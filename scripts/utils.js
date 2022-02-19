@@ -4,6 +4,8 @@ function delay(time) {
 }
 
 async function simulateClick(element){
-    document.querySelector(element).dispatchEvent(new MouseEvent('mousedown'));
-    document.querySelector(element).dispatchEvent(new MouseEvent('mouseup'));
+    let e = document.querySelector(element);
+    buttonPress(e, 'down');
+    e = document.querySelector(element);
+    buttonPress(e, 'up');
 }
