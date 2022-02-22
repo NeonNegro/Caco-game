@@ -1,7 +1,7 @@
 const assets = {
-    passing : '../../assets/imgs/passando.gif',
-    hiting : '../../assets/imgs/hiting.gif',
-    eating: '../../assets/imgs/eating.gif',
+    passing : './assets/imgs/passando.gif',
+    hiting : './assets/imgs/hiting.gif',
+    eating: './assets/imgs/eating.gif',
 }
 
 
