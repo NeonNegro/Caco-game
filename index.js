@@ -9,7 +9,7 @@
 // * depois das 3 fases, folta pra primeira, com um novo nivel
    
 let expectedAnswer = '';
-const BIPS_LOCATION = `/assets/sounds/bips/F`;
+const BIPS_LOCATION = `./assets/sounds/bips/F`;
 const HTMLEqual =  () => {return document.querySelector('.equal')};
 const HTMLDifferent =  () => {return document.querySelector('.different')};
 const HTMLFace = () => {return document.querySelector('.face')};
