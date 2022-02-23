@@ -48,6 +48,8 @@ const phases = {
     actual : 'Example',
     getActual :  () => {return phases[phases.actual]},
     next: () => {
+        if(phases.getActual() !== phases['Example'])
+            animations.endOfPhase();
         let act = phases[phases.actual] + 1;
         if (act > phases.TOTAL)
             act = 1;

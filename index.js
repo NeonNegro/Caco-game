@@ -33,31 +33,11 @@ const progress = {
     attempt : attempts,
     lifes: lives,
     mooveOn : () =>{
-        // if(progress.attempt.next() === 'end')
-        //     if(progress.durIEE.next() === 'end')
-        //         if(progress.phase.next() === 'end'){
-
-        //             animations.endOfPhase();
-
-        //             if(progress.level.next() === 'end')
-        //                 if(progress.cycle.next() === 'end'){
-        //                     console.log('jogoAcabou');
-        //                     //finishGame();
-        //                 }
-        //         }
-
-
-            const isEndAttempt = progress.attempt.next();
-                if(isEndAttempt){
-                    const isEnddurIEE = progress.durIEE.next();
-                    if(isEnddurIEE){
-                        const isEndPhase = progress.phase.next();
-                        animations.endOfPhase();
-                        if(isEndPhase){
-                            const isEndLevel = progress.level.next();
-                            if(isEndLevel){
-                                const isEndCycle = progress.cycle.next();
-                                if(isEndCycle){
+                if(progress.attempt.next()){
+                    if(progress.durIEE.next()){
+                        if(progress.phase.next()){
+                            if(progress.level.next()){
+                                if(progress.cycle.next()){
                                     console.log('jogoAcabou');
                                     //finishGame();
                                 }
@@ -65,6 +45,25 @@ const progress = {
                         }
                     }
                 }
+
+            // const isEndAttempt = progress.attempt.next();
+            //     if(isEndAttempt){
+            //         const isEnddurIEE = progress.durIEE.next();
+            //         if(isEnddurIEE){
+            //             const isEndPhase = progress.phase.next();
+            //             animations.endOfPhase();
+            //             if(isEndPhase){
+            //                 const isEndLevel = progress.level.next();
+            //                 if(isEndLevel){
+            //                     const isEndCycle = progress.cycle.next();
+            //                     if(isEndCycle){
+            //                         console.log('jogoAcabou');
+            //                         //finishGame();
+            //                     }
+            //                 }
+            //             }
+            //         }
+            //     }
     }
 }
 const possibleAnswers = {
