@@ -1,8 +1,10 @@
 .menu{
-    width: 100vw;
+    /* width: 100vw; */
+    width: 800px;
     max-width: 100vw;
     display: flex;
     align-items: center;
+    background: linear-gradient(86deg, rgba(59,164,69,1) 20%, rgba(98,255,116,1) 50%, rgba(59,164,69,1) 80%);
 }
 
 .blur{
