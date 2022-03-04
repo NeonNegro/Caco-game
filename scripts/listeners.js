@@ -2,14 +2,14 @@ const listeners = {
     disableAll : () => {
         HTMLEqual().removeEventListener("click", playerActions.chooseAnswer, true);
         HTMLDifferent().removeEventListener("click", playerActions.chooseAnswer, true);
-        HTMLFace().removeEventListener("click", playerActions.requestBip, true);
+        HTMLFace().removeEventListener("click", askForSound, true);
         HTMLEqual().removeEventListener("mousedown", buttonPress, true);
         HTMLEqual().removeEventListener("mouseup", buttonPress, true);
         HTMLDifferent().removeEventListener("mousedown", buttonPress, true);
         HTMLDifferent().removeEventListener("mouseup", buttonPress, true);
     },
     enableChoise : () => {
-        HTMLFace().removeEventListener("click", playerActions.requestBip, true);
+        HTMLFace().removeEventListener("click", askForSound, true);
         HTMLEqual().addEventListener("click", playerActions.chooseAnswer, true);
         HTMLEqual().givenAnswer = possibleAnswers['equal'];
         HTMLDifferent().addEventListener("click", playerActions.chooseAnswer, true);
@@ -21,6 +21,12 @@ const listeners = {
     },
     enableRequestBip: () => {
         listeners.disableAll();
-        HTMLFace().addEventListener("click", playerActions.requestBip, true);
+        HTMLFace().addEventListener("click", askForSound , true);
     }
 };
+
+
+function askForSound(){
+    playerActions.requestBip();
+    facePress();
+}

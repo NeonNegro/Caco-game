@@ -28,7 +28,7 @@
     gap: 20%;
 }
 
-.face {
+.face.normal{
     width: 100%;
     max-height: 33vw;
     background-color: yellow;
@@ -36,11 +36,32 @@
     align-items: center;
     justify-content: center;
 }
-
-.face img{
+.face.normal img{
     height: auto;
     width: 100%;
 }
+.face.happy {
+    display: none;
+}
+.face-happy{
+    
+    width: 100%;
+    max-height: 33vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.face-happy img{
+    height: 101.86px;
+    width: 100%;
+    object-fit: cover;
+}
+.face-happy.normal{
+    display: none;
+}
+
+
+
 
 .lives {
     display: flex;

@@ -154,3 +154,12 @@ function buttonPress(e, direct){
         else
             setTimeout(()=>{children[i].classList.remove('pressed')}, 400);
 }
+
+function facePress(e, direct){
+    document.querySelector('.face').classList.add('happy');
+    document.querySelector('.face-happy').classList.remove('normal');
+    setTimeout(()=>{
+        document.querySelector('.face').classList.remove('happy');
+        document.querySelector('.face-happy').classList.add('normal');
+    }, 750);
+}
