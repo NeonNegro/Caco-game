@@ -13,6 +13,7 @@ const BIPS_LOCATION = `./assets/sounds/bips/F`;
 const HTMLEqual =  () => {return document.querySelector('.equal')};
 const HTMLDifferent =  () => {return document.querySelector('.different')};
 const HTMLFace = () => {return document.querySelector('.face')};
+const HTMLBtHelp = () => {return document.querySelector('.help')};
 
 
 const progress = {
@@ -45,25 +46,6 @@ const progress = {
                         }
                     }
                 }
-
-            // const isEndAttempt = progress.attempt.next();
-            //     if(isEndAttempt){
-            //         const isEnddurIEE = progress.durIEE.next();
-            //         if(isEnddurIEE){
-            //             const isEndPhase = progress.phase.next();
-            //             animations.endOfPhase();
-            //             if(isEndPhase){
-            //                 const isEndLevel = progress.level.next();
-            //                 if(isEndLevel){
-            //                     const isEndCycle = progress.cycle.next();
-            //                     if(isEndCycle){
-            //                         console.log('jogoAcabou');
-            //                         //finishGame();
-            //                     }
-            //                 }
-            //             }
-            //         }
-            //     }
     }
 }
 const possibleAnswers = {
@@ -102,11 +84,15 @@ const playerActions =  {
         generateSound().play();
         listeners.enableChoise();
     },
+    requestHelp : () => {
+        render.toggleHelp();
+    }
 }
 
 
 
 listeners.enableRequestBip();
+listeners.enableHelp();
 
 
 
@@ -139,7 +125,7 @@ function generateSound(){
     }
 
     expectedAnswer = (notes[0] === notes[1]) ? possibleAnswers['equal'] : possibleAnswers['different'];
-    return new Audio(`${BIPS_LOCATION}${progress.get().cycle}${progress.get().durIEE}${notes}.wav`); //return new Audio(`/assets/sounds/bips/F${cycles[cycle]}${levels[level].durIEEs[duIEE]}${notes}.wav`);
+    return new Audio(`${BIPS_LOCATION}${progress.get().cycle}${progress.get().durIEE}${notes}.wav`);
 }
 
 

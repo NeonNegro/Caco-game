@@ -1,6 +1,8 @@
 const HTMLLifes = () => {return document.querySelectorAll('.live')};
 const HTMLMessageContainer = () => {return document.querySelector('.message')};
 const HTMLMessage = () => {return document.querySelector('.message h1')};
+const HTMLLHelpBackGround = () => {return document.querySelector('.help-background')};
+const HTMLLHelpModal = () =>{return document.querySelector('.help-modal')};
 const HTMLLMessageBackGround = () => {return document.querySelector('.message-background')};
 
 const render = {
@@ -15,6 +17,16 @@ const render = {
         HTMLMessage().innerHTML = msg;
         HTMLMessageContainer().classList.remove('hide');
         HTMLLMessageBackGround().classList.remove('hide');
+    },
+    toggleHelp: () => {
+        if(HTMLLHelpBackGround().classList.contains('hide')){
+            HTMLLHelpBackGround().classList.remove('hide');
+            HTMLLHelpModal().classList.remove('hide');
+        }
+        else{
+            HTMLLHelpBackGround().classList.add('hide');
+            HTMLLHelpModal().classList.add('hide');
+        }
     },
     hideMessage: () => {
         HTMLMessageContainer().classList.add('hide');

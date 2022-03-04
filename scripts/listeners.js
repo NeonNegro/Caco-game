@@ -22,6 +22,9 @@ const listeners = {
     enableRequestBip: () => {
         listeners.disableAll();
         HTMLFace().addEventListener("click", askForSound , true);
+    },
+    enableHelp: () => {
+        HTMLBtHelp().addEventListener("click", showHelp, true);
     }
 };
 
@@ -29,4 +32,8 @@ const listeners = {
 function askForSound(){
     playerActions.requestBip();
     facePress();
+}
+
+function showHelp(){
+    playerActions.requestHelp();
 }
